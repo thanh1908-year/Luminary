@@ -27,7 +27,7 @@ ADMIN_TOKEN=ma-bi-mat-cua-ban node server.js
 
 ## 2. Đổi tên miền
 
-Trước khi lên mạng, thay `luminary.onrender.com` bằng tên miền thật của bạn trong:
+Trước khi lên mạng, thay `luminary-wpi5.onrender.com` bằng tên miền thật của bạn trong:
 
 - `index.html` (canonical, og:url, og:image, twitter:image)
 - `manifest.webmanifest`
@@ -50,11 +50,11 @@ Repo này đã có sẵn `render.yaml`. Các bước:
    - **Health check path**: `/api/health`
    - **Plan**: `Free`, **Region**: `Singapore`
    - **Environment**: `NODE_VERSION=22`, `ADMIN_TOKEN=<mã bí mật>` (`render.yaml` sẽ tự sinh nếu dùng Blueprint)
-3. Render cấp URL dạng `https://luminary.onrender.com` (có thể thêm hậu tố nếu tên đã被人 dùng). Mở thử:
+3. Render cấp URL dạng `https://luminary-wpi5.onrender.com` (có thể thêm hậu tố nếu tên đã被人 dùng). Mở thử:
    ```bash
-   curl https://luminary.onrender.com/api/health
+   curl https://luminary-wpi5.onrender.com/api/health
    ```
-4. Trang quản lý: `https://luminary.onrender.com/admin.html`, dùng đúng `ADMIN_TOKEN` trong mục **Environment** của service.
+4. Trang quản lý: `https://luminary-wpi5.onrender.com/admin.html`, dùng đúng `ADMIN_TOKEN` trong mục **Environment** của service.
 
 **Giới hạn của Free plan cần biết:**
 

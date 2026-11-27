@@ -4,4 +4,4 @@ Disallow: /admin.html
 Disallow: /api/
 Disallow: /data/
 
-Sitemap: https://luminary.onrender.com/sitemap.xml
+Sitemap: https://luminary-wpi5.onrender.com/sitemap.xml
