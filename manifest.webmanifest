@@ -1,0 +1,48 @@
+{
+  "id": "/",
+  "name": "Luminary",
+  "short_name": "Luminary",
+  "description": "Tiệm bánh ngọt thủ công với 15 món bánh làm mới mỗi sáng. Đặt bánh nhanh chóng, giao trong ngày.",
+  "lang": "vi",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FFF9F4",
+  "theme_color": "#E990A2",
+  "categories": ["food", "shopping"],
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Xem thực đơn",
+      "short_name": "Thực đơn",
+      "url": "/#products",
+      "icons": [{ "src": "/images/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Liên hệ đặt bánh",
+      "short_name": "Đặt bánh",
+      "url": "/#contact",
+      "icons": [{ "src": "/images/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

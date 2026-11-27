@@ -1,0 +1,20 @@
+# Render Blueprint — deploy nhanh Luminary.
+# Free plan: có URL https://<service>.onrender.com và HTTPS tự động,
+# nhưng KHÔNG có persistent disk (xem lại phần 3 trong DEPLOY.md trước khi thu tiền thật).
+
+services:
+  - type: web
+    name: luminary
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci --omit=dev
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: ADMIN_TOKEN
+        generateValue: true
+    # Khi lên paid, thêm Persistent Disk trong Dashboard với mount path:
+    # /opt/render/project/src/data  (server.js ghi data/orders.json tại đây).

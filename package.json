@@ -1,0 +1,18 @@
+{
+  "name": "luminary-website",
+  "version": "2.1.0",
+  "private": true,
+  "description": "Trang web bánh ngọt Luminary: giao diện pastel, đặt hàng lưu qua API Node.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node tools/smoke_test.js",
+    "images": "python tools/optimize_images.py"
+  },
+  "devDependencies": {
+    "jsdom": "^31.0.1"
+  }
+}

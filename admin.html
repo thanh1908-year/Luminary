@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#FFF9F4" />
+  <title>Quản lý đơn hàng | Luminary</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo-mark.svg" />
+  <link rel="stylesheet" href="admin.css?v=1" />
+</head>
+<body>
+  <div class="admin">
+    <header class="admin__head">
+      <a class="admin__brand" href="/" aria-label="Luminary - về trang tiệm">
+        <img src="images/logo-mark.svg" alt="" width="46" height="46" />
+        <span><strong>Lu<em>minary</em></strong><small>QUẢN LÝ ĐƠN HÀNG</small></span>
+      </a>
+      <a class="admin__back" href="/">← Về trang tiệm</a>
+    </header>
+
+    <main>
+      <section class="panel login" id="loginView">
+        <div class="login__icon" aria-hidden="true">🔒</div>
+        <h1>Đăng nhập quản lý</h1>
+        <p>Nhập mã quản lý để xem, cập nhật và xóa đơn hàng.</p>
+        <form id="loginForm">
+          <label for="tokenInput">Mã quản lý</label>
+          <div class="login__row">
+            <input id="tokenInput" type="password" autocomplete="current-password" placeholder="Nhập mã quản lý" required />
+            <button class="btn" type="submit">Vào bảng điều khiển →</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="dashboard" hidden>
+        <div class="stats" aria-label="Tổng quan đơn hàng">
+          <article class="stat"><small>Tổng đơn</small><strong id="statTotal">0</strong><span>từ máy chủ</span></article>
+          <article class="stat"><small>Doanh thu</small><strong id="statRevenue">0đ</strong><span>chưa trừ đơn hủy</span></article>
+          <article class="stat"><small>Đang xử lý</small><strong id="statPending">0</strong><span>chuẩn bị & xác nhận</span></article>
+          <article class="stat"><small>Đơn hôm nay</small><strong id="statToday">0</strong><span>theo ngày tạo</span></article>
+        </div>
+
+        <div class="toolbar">
+          <label class="search">
+            <span aria-hidden="true">🔍</span>
+            <input type="search" id="searchInput" placeholder="Tìm mã đơn, tên, điện thoại..." aria-label="Tìm đơn hàng" />
+          </label>
+          <label class="filter">
+            Trạng thái:
+            <select id="statusFilter" aria-label="Lọc theo trạng thái">
+              <option value="all">Tất cả</option>
+              <option value="Đang chuẩn bị">Đang chuẩn bị</option>
+              <option value="Đã xác nhận">Đã xác nhận</option>
+              <option value="Đang giao">Đang giao</option>
+              <option value="Hoàn tất">Hoàn tất</option>
+              <option value="Đã hủy">Đã hủy</option>
+            </select>
+          </label>
+          <button class="btn btn--ghost" type="button" id="refreshBtn">Làm mới</button>
+          <button class="btn btn--ghost" type="button" id="logoutBtn">Đăng xuất</button>
+        </div>
+
+        <div class="orders" id="ordersList"></div>
+      </section>
+
+      <p class="notice" id="adminMsg" role="status" aria-live="polite"></p>
+    </main>
+  </div>
+
+  <div class="toast" id="adminToast" role="status" aria-live="polite"></div>
+  <script src="admin.js?v=1" defer></script>
+</body>
+</html>
